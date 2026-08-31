@@ -511,7 +511,7 @@ function SkillsView({ onSelectTab }: { onSelectTab: (tab: TabId) => void }) {
                 </div>
 
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {category.items.map((item) => (
+                  {(category.skills || []).map((item) => (
                     <span
                       key={item}
                       className="rounded-lg border border-portfolio-light-line bg-portfolio-light px-3 py-1.5 text-xs font-medium text-portfolio-light-ink transition-colors hover:bg-portfolio-light-line"
