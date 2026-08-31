@@ -42,3 +42,5 @@ lovable_Portfolio_Pro.zip
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
