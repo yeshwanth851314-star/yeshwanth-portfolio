@@ -128,8 +128,9 @@ function Hero() {
         <p className="text-xs font-semibold uppercase tracking-[0.35em] text-portfolio-accent sm:text-sm">
           Portfolio · 2026
         </p>
-        <h1 className="hero-heading-dark whitespace-nowrap text-[12.8vw] font-black uppercase leading-none tracking-tight">
-          Hi, I&apos;m {personal.shortName}
+        <h1 className="hero-heading-dark text-[clamp(2.9rem,11.2vw,8.8rem)] font-black uppercase leading-[0.92] tracking-tight">
+          <span className="block">Hi, I&apos;m Yeshwanth</span>
+          <span className="block">Kumar</span>
         </h1>
       </FadeIn>
 
