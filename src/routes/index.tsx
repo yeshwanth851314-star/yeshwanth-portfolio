@@ -110,7 +110,7 @@ function Hero() {
         >
           <div className="flex items-center gap-2 text-portfolio-accent">
             <span className="inline-block size-2 rounded-full bg-portfolio-accent animate-pulse" />
-            <span className="font-semibold tracking-widest text-xs">CS STUDENT · LPU</span>
+            <span className="font-semibold tracking-widest text-xs">CSE STUDENT · LPU</span>
           </div>
           <div className="flex items-center gap-4 sm:gap-6">
             <a href="#about" className="nav-link text-portfolio-light-ink hover:text-portfolio-accent">About</a>
