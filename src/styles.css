@@ -63,6 +63,14 @@
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
+.hero-heading-dark {
+  font-family: var(--font-display);
+  background: linear-gradient(180deg, #090a0f 20%, #434658 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
 .portrait-glow {
   background: radial-gradient(circle, rgba(59, 130, 246, 0.35) 0%, rgba(37, 99, 235, 0.1) 45%, transparent 70%);
   filter: blur(48px);

@@ -101,24 +101,24 @@ function ResumeButton({
 
 function Hero() {
   return (
-    <header className="relative flex min-h-[100svh] flex-col overflow-hidden px-5 pb-7 pt-6 sm:px-8 md:px-10 md:pb-10 md:pt-8">
+    <header className="relative flex min-h-[100svh] flex-col overflow-hidden bg-white px-5 pb-7 pt-6 text-portfolio-light-ink sm:px-8 md:px-10 md:pb-10 md:pt-8">
       {/* Navigation */}
       <FadeIn className="relative z-30">
         <nav
           aria-label="Primary navigation"
-          className="flex flex-wrap items-center justify-between gap-3 text-xs font-medium uppercase tracking-wider text-portfolio-text sm:text-sm md:text-base"
+          className="flex flex-wrap items-center justify-between gap-3 text-xs font-medium uppercase tracking-wider text-portfolio-light-ink sm:text-sm md:text-base"
         >
           <div className="flex items-center gap-2 text-portfolio-accent">
             <span className="inline-block size-2 rounded-full bg-portfolio-accent animate-pulse" />
             <span className="font-semibold tracking-widest text-xs">CS STUDENT · LPU</span>
           </div>
           <div className="flex items-center gap-4 sm:gap-6">
-            <a href="#about" className="nav-link">About</a>
-            <a href="#skills" className="nav-link">Skills</a>
-            <a href="#projects" className="nav-link">Projects</a>
-            <a href="#achievements" className="nav-link">Achievements</a>
-            <a href="#education" className="nav-link">Education</a>
-            <a href="#contact" className="nav-link">Contact</a>
+            <a href="#about" className="nav-link text-portfolio-light-ink hover:text-portfolio-accent">About</a>
+            <a href="#skills" className="nav-link text-portfolio-light-ink hover:text-portfolio-accent">Skills</a>
+            <a href="#projects" className="nav-link text-portfolio-light-ink hover:text-portfolio-accent">Projects</a>
+            <a href="#achievements" className="nav-link text-portfolio-light-ink hover:text-portfolio-accent">Achievements</a>
+            <a href="#education" className="nav-link text-portfolio-light-ink hover:text-portfolio-accent">Education</a>
+            <a href="#contact" className="nav-link text-portfolio-light-ink hover:text-portfolio-accent">Contact</a>
           </div>
         </nav>
       </FadeIn>
@@ -128,7 +128,7 @@ function Hero() {
         <p className="text-xs font-semibold uppercase tracking-[0.35em] text-portfolio-accent sm:text-sm">
           Portfolio · 2026
         </p>
-        <h1 className="hero-heading whitespace-nowrap text-[12.8vw] font-black uppercase leading-none tracking-tight">
+        <h1 className="hero-heading-dark whitespace-nowrap text-[12.8vw] font-black uppercase leading-none tracking-tight">
           Hi, I&apos;m {personal.shortName}
         </h1>
       </FadeIn>
@@ -140,21 +140,21 @@ function Hero() {
         transition={{ duration: 0.9, delay: 0.35 }}
         className="pointer-events-none absolute bottom-0 left-1/2 z-10 w-[min(82vw,520px)] -translate-x-1/2 sm:w-[min(54vw,560px)] lg:w-[min(40vw,600px)]"
       >
-        <div className="portrait-glow absolute inset-x-[15%] bottom-[6%] h-3/4 rounded-full" />
+        <div className="portrait-glow absolute inset-x-[15%] bottom-[6%] h-3/4 rounded-full opacity-30" />
         <img
           src={portrait}
           alt="Madala Yashwanth Kumar portrait"
           width={1024}
           height={1024}
           fetchPriority="high"
-          className="relative w-full object-contain object-bottom drop-shadow-2xl"
+          className="relative w-full object-contain object-bottom drop-shadow-xl"
         />
       </motion.div>
 
       {/* Bottom Hero Bar */}
       <div className="relative z-20 mt-auto flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-end">
         <FadeIn delay={0.25} className="max-w-[280px] sm:max-w-[320px] md:max-w-[380px]">
-          <p className="text-[clamp(0.78rem,1.3vw,1.1rem)] font-light uppercase leading-snug tracking-wide text-portfolio-text">
+          <p className="text-[clamp(0.78rem,1.3vw,1.1rem)] font-light uppercase leading-snug tracking-wide text-portfolio-light-ink">
             {personal.tagline}
           </p>
           <div className="mt-3 flex items-center gap-3">
@@ -163,7 +163,7 @@ function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub Profile"
-              className="text-portfolio-muted transition-colors hover:text-portfolio-text"
+              className="text-portfolio-light-muted transition-colors hover:text-portfolio-light-ink"
             >
               <Github className="size-4" />
             </a>
@@ -172,14 +172,14 @@ function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn Profile"
-              className="text-portfolio-muted transition-colors hover:text-portfolio-text"
+              className="text-portfolio-light-muted transition-colors hover:text-portfolio-light-ink"
             >
               <Linkedin className="size-4" />
             </a>
             <a
               href={`mailto:${personal.email}`}
               aria-label="Send Email"
-              className="text-portfolio-muted transition-colors hover:text-portfolio-text"
+              className="text-portfolio-light-muted transition-colors hover:text-portfolio-light-ink"
             >
               <Mail className="size-4" />
             </a>
@@ -188,7 +188,7 @@ function Hero() {
         <FadeIn delay={0.35} className="flex items-center gap-3">
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 rounded-full border border-portfolio-line bg-portfolio-surface px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-portfolio-text transition-all hover:bg-portfolio-line sm:px-6 sm:py-3 sm:text-sm"
+            className="inline-flex items-center gap-2 rounded-full border border-portfolio-light-line bg-white px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-portfolio-light-ink shadow-sm transition-all hover:bg-portfolio-light sm:px-6 sm:py-3 sm:text-sm"
           >
             View Projects
           </a>
@@ -199,7 +199,7 @@ function Hero() {
       <a
         href="#about"
         aria-label="Scroll to about section"
-        className="absolute bottom-7 left-1/2 z-20 hidden -translate-x-1/2 text-portfolio-muted transition-colors hover:text-portfolio-text lg:block"
+        className="absolute bottom-7 left-1/2 z-20 hidden -translate-x-1/2 text-portfolio-light-muted transition-colors hover:text-portfolio-light-ink lg:block"
       >
         <ArrowDownRight className="size-7" />
       </a>
@@ -210,18 +210,18 @@ function Hero() {
 function Marquee() {
   const items = [sdgDashboard, tikiTopple, sdgDashboard, tikiTopple];
   return (
-    <section aria-label="Selected work preview" className="overflow-hidden bg-portfolio-dark py-16 sm:py-24">
+    <section aria-label="Selected work preview" className="overflow-hidden bg-white py-16 sm:py-24">
       <div className="marquee-track flex w-max gap-4">
         {[...items, ...items].map((image, i) => (
           <div
             key={`marquee-top-${i}`}
-            className="h-[170px] w-[280px] shrink-0 overflow-hidden rounded-xl border border-portfolio-line bg-portfolio-surface sm:h-[220px] sm:w-[360px]"
+            className="h-[170px] w-[280px] shrink-0 overflow-hidden rounded-xl border border-portfolio-light-line bg-portfolio-light shadow-sm sm:h-[220px] sm:w-[360px]"
           >
             <img
               src={image}
               alt="Project screen preview"
               loading="lazy"
-              className="size-full object-cover opacity-80 transition duration-500 hover:scale-105 hover:opacity-100"
+              className="size-full object-cover opacity-90 transition duration-500 hover:scale-105 hover:opacity-100"
             />
           </div>
         ))}
@@ -230,13 +230,13 @@ function Marquee() {
         {[...items, ...items].reverse().map((image, i) => (
           <div
             key={`marquee-bottom-${i}`}
-            className="h-[170px] w-[280px] shrink-0 overflow-hidden rounded-xl border border-portfolio-line bg-portfolio-surface sm:h-[220px] sm:w-[360px]"
+            className="h-[170px] w-[280px] shrink-0 overflow-hidden rounded-xl border border-portfolio-light-line bg-portfolio-light shadow-sm sm:h-[220px] sm:w-[360px]"
           >
             <img
               src={image}
               alt="Project screen preview"
               loading="lazy"
-              className="size-full object-cover opacity-60 transition duration-500 hover:scale-105 hover:opacity-100"
+              className="size-full object-cover opacity-75 transition duration-500 hover:scale-105 hover:opacity-100"
             />
           </div>
         ))}
@@ -247,7 +247,7 @@ function Marquee() {
 
 function About() {
   return (
-    <section id="about" className="relative flex min-h-[85vh] items-center overflow-hidden px-5 py-24 sm:px-8 md:px-10">
+    <section id="about" className="relative flex min-h-[85vh] items-center overflow-hidden rounded-t-[40px] bg-portfolio-dark px-5 py-24 sm:rounded-t-[52px] sm:px-8 md:px-10">
       <Code2
         className="absolute left-[4%] top-[12%] size-20 rotate-[-12deg] text-portfolio-line sm:size-28 md:size-36"
         strokeWidth={1}
