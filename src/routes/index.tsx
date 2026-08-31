@@ -405,9 +405,10 @@ function ProjectCard({ project, index }: { project: ProjectItem; index: number }
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`View ${project.title} live demo`}
-                className="grid size-10 sm:size-11 place-items-center rounded-full border border-portfolio-accent bg-portfolio-accent text-on-accent transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full border border-portfolio-accent bg-portfolio-accent px-3.5 py-2 text-[11px] font-semibold uppercase tracking-wider text-on-accent shadow-md shadow-portfolio-accent/20 transition-all hover:scale-105 hover:bg-portfolio-accent-hover sm:px-4 sm:py-2.5 sm:text-xs"
               >
-                <ExternalLink className="size-4 sm:size-5" />
+                <span>Live Demo</span>
+                <ExternalLink className="size-3.5" />
               </a>
             )}
           </div>

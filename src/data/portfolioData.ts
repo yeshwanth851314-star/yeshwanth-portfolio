@@ -113,7 +113,7 @@ export const portfolioData = {
       ],
       techStack: ["React", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Recharts", "GitHub"],
       githubUrl: "https://github.com/yeshwanth851314-star",
-      liveUrl: "", // Ready for live URL
+      liveUrl: "https://yaswanth-one.vercel.app/",
       imageKey: "sdgDashboard",
     },
     {
@@ -132,7 +132,7 @@ export const portfolioData = {
       ],
       techStack: ["React", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Lovable", "GitHub"],
       githubUrl: "https://github.com/yeshwanth851314-star",
-      liveUrl: "", // Ready for live URL
+      liveUrl: "https://tikki-joy-adventure.lovable.app/",
       imageKey: "tikiTopple",
     },
   ] as ProjectItem[],
