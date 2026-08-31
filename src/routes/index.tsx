@@ -207,39 +207,82 @@ function Hero() {
   );
 }
 
+const highlightSkills = [
+  { name: "React", category: "Frontend", icon: Code2 },
+  { name: "Python", category: "Programming", icon: Cpu },
+  { name: "JavaScript", category: "Frontend", icon: Code2 },
+  { name: "C / C++", category: "Core", icon: Cpu },
+  { name: "SQL & MySQL", category: "Databases", icon: Database },
+  { name: "Tailwind CSS", category: "UI/UX", icon: Layers },
+  { name: "Data Structures & Algorithms", category: "Core CS", icon: Cpu },
+  { name: "Power BI & Recharts", category: "Data Viz", icon: Sparkles },
+  { name: "MongoDB", category: "Databases", icon: Database },
+  { name: "Git & GitHub", category: "Version Control", icon: Code2 },
+  { name: "DBMS & Operating Systems", category: "Systems", icon: Database },
+];
+
+const highlightMilestones = [
+  { title: "Hackathon Winner", detail: "Digital Tiki Topple Game", badge: "Competition", icon: Trophy },
+  { title: "Freelance Website Work", detail: "Earned ₹2,500 delivering client sites", badge: "Milestone", icon: Award },
+  { title: "Python Programming", detail: "Fundamentals & Advanced Certified", badge: "Credentials", icon: GraduationCap },
+  { title: "B.Tech in CSE", detail: "Lovely Professional University · CGPA 7.2", badge: "Academics", icon: GraduationCap },
+  { title: "SDG India Dashboard", detail: "17 Goals Dynamic Progress Tracking", badge: "React Project", icon: Sparkles },
+];
+
 function Marquee() {
-  const items = [sdgDashboard, tikiTopple, sdgDashboard, tikiTopple];
   return (
-    <section aria-label="Selected work preview" className="overflow-hidden bg-white py-16 sm:py-24">
-      <div className="marquee-track flex w-max gap-4">
-        {[...items, ...items].map((image, i) => (
-          <div
-            key={`marquee-top-${i}`}
-            className="h-[170px] w-[280px] shrink-0 overflow-hidden rounded-xl border border-portfolio-light-line bg-portfolio-light shadow-sm sm:h-[220px] sm:w-[360px]"
-          >
-            <img
-              src={image}
-              alt="Project screen preview"
-              loading="lazy"
-              className="size-full object-cover opacity-90 transition duration-500 hover:scale-105 hover:opacity-100"
-            />
-          </div>
-        ))}
+    <section aria-label="Skills and achievements ticker" className="overflow-hidden bg-white py-12 sm:py-16">
+      {/* Top Track: Skills */}
+      <div className="marquee-track flex w-max gap-3.5 sm:gap-4">
+        {[...highlightSkills, ...highlightSkills].map((item, i) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={`skill-marquee-${i}`}
+              className="flex items-center gap-3 rounded-full border border-portfolio-light-line bg-portfolio-light px-5 py-3 shadow-xs transition-all duration-300 hover:scale-105 hover:bg-white hover:shadow-md"
+            >
+              <div className="grid size-8 place-items-center rounded-full bg-white text-portfolio-accent shadow-xs">
+                <Icon className="size-4" />
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold uppercase tracking-wider text-portfolio-light-ink sm:text-sm">
+                  {item.name}
+                </span>
+                <span className="rounded-full bg-portfolio-light-line px-2 py-0.5 text-[10px] font-semibold uppercase text-portfolio-light-muted">
+                  {item.category}
+                </span>
+              </div>
+            </div>
+          );
+        })}
       </div>
-      <div className="marquee-track-reverse mt-4 flex w-max gap-4">
-        {[...items, ...items].reverse().map((image, i) => (
-          <div
-            key={`marquee-bottom-${i}`}
-            className="h-[170px] w-[280px] shrink-0 overflow-hidden rounded-xl border border-portfolio-light-line bg-portfolio-light shadow-sm sm:h-[220px] sm:w-[360px]"
-          >
-            <img
-              src={image}
-              alt="Project screen preview"
-              loading="lazy"
-              className="size-full object-cover opacity-75 transition duration-500 hover:scale-105 hover:opacity-100"
-            />
-          </div>
-        ))}
+
+      {/* Bottom Track: Achievements */}
+      <div className="marquee-track-reverse mt-3.5 flex w-max gap-3.5 sm:mt-4 sm:gap-4">
+        {[...highlightMilestones, ...highlightMilestones].map((item, i) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={`milestone-marquee-${i}`}
+              className="flex items-center gap-3 rounded-full border border-portfolio-light-line bg-portfolio-light px-5 py-3 shadow-xs transition-all duration-300 hover:scale-105 hover:bg-white hover:shadow-md"
+            >
+              <div className="grid size-8 place-items-center rounded-full bg-portfolio-accent/15 text-portfolio-accent shadow-xs">
+                <Icon className="size-4" />
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold uppercase tracking-wider text-portfolio-light-ink sm:text-sm">
+                  {item.title}
+                </span>
+                <span className="hidden text-xs font-light text-portfolio-light-muted sm:inline">
+                  • {item.detail}
+                </span>
+                <span className="rounded-full bg-portfolio-accent/15 px-2 py-0.5 text-[10px] font-bold uppercase text-portfolio-accent">
+                  {item.badge}
+                </span>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
